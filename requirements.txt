@@ -1,0 +1,12 @@
+# PyTorch dengan CUDA 12.4: pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.5.1
+torchvision==0.20.1
+numpy
+pandas==2.2.3
+scikit-learn==1.5.2
+opencv-python-headless==4.10.0.84
+pillow==11.0.0
+matplotlib==3.9.2
+tqdm==4.66.5
+streamlit==1.40.1
+ipykernel==6.29.5

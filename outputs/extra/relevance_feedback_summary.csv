@@ -1,0 +1,7 @@
+Fitur,Feedback,P@10 mean,P@10 std,mAP mean,mAP std,mAP Virus mean,mAP Virus std
+Fine-tuned,Tanpa feedback,0.8029,0.0038,0.8174,0.0206,0.6369,0.05
+Fine-tuned,Rocchio 1 putaran,0.8543,0.0062,0.8424,0.0231,0.681,0.0553
+Fine-tuned,Rocchio 2 putaran,0.8811,0.008,0.8571,0.0256,0.709,0.0594
+Pretrained,Tanpa feedback,0.6796,,0.525,,0.3379,
+Pretrained,Rocchio 1 putaran,0.7939,,0.5445,,0.3533,
+Pretrained,Rocchio 2 putaran,0.8487,,0.5546,,0.3636,

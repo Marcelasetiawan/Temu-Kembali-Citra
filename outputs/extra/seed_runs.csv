@@ -1,0 +1,28 @@
+Skenario,Model,seed,Akurasi,Macro F1,Macro AUC,P@10,mAP,Val Macro F1
+Skenario 1 (Original),MobileNetV2,42,0.7978,0.8052,0.9136,0.8056,0.825,0.8255
+Skenario 1 (Original),MobileNetV2,7,0.7978,0.8001,0.9199,0.7819,0.7409,0.8293
+Skenario 1 (Original),MobileNetV2,123,0.8022,0.8072,0.9115,0.8173,0.8361,0.8338
+Skenario 1 (Original),EfficientNet-B0,42,0.7781,0.7745,0.9017,0.7563,0.7119,0.8225
+Skenario 1 (Original),EfficientNet-B0,7,0.7945,0.7972,0.9184,0.7746,0.7558,0.8281
+Skenario 1 (Original),EfficientNet-B0,123,0.8044,0.8091,0.9226,0.8,0.8419,0.8295
+Skenario 1 (Original),DenseNet121,42,0.7978,0.7921,0.9136,0.7847,0.7716,0.8192
+Skenario 1 (Original),DenseNet121,7,0.8087,0.8118,0.9111,0.8094,0.8508,0.8327
+Skenario 1 (Original),DenseNet121,123,0.7913,0.7917,0.9135,0.7943,0.8121,0.8306
+Skenario 2 (Augmentasi),MobileNetV2,42,0.8055,0.8072,0.9145,0.8032,0.7903,0.8299
+Skenario 2 (Augmentasi),MobileNetV2,7,0.788,0.7938,0.9173,0.7679,0.7288,0.824
+Skenario 2 (Augmentasi),MobileNetV2,123,0.8098,0.8093,0.9192,0.8058,0.7923,0.8296
+Skenario 2 (Augmentasi),EfficientNet-B0,42,0.8142,0.8186,0.9299,0.8176,0.808,0.8407
+Skenario 2 (Augmentasi),EfficientNet-B0,7,0.7836,0.7787,0.9094,0.7709,0.7343,0.8272
+Skenario 2 (Augmentasi),EfficientNet-B0,123,0.8109,0.8054,0.9277,0.815,0.8005,0.8345
+Skenario 2 (Augmentasi),DenseNet121,42,0.8077,0.8056,0.9167,0.8073,0.8374,0.8392
+Skenario 2 (Augmentasi),DenseNet121,7,0.8011,0.8078,0.9187,0.801,0.8185,0.841
+Skenario 2 (Augmentasi),DenseNet121,123,0.8175,0.8214,0.9251,0.8005,0.7963,0.8403
+Skenario 3 (CLAHE + Augmentasi),MobileNetV2,42,0.8033,0.8061,0.9216,0.8017,0.8046,0.8248
+Skenario 3 (CLAHE + Augmentasi),MobileNetV2,7,0.812,0.812,0.9207,0.7795,0.7528,0.8213
+Skenario 3 (CLAHE + Augmentasi),MobileNetV2,123,0.7902,0.7878,0.9152,0.7679,0.7248,0.8126
+Skenario 3 (CLAHE + Augmentasi),EfficientNet-B0,42,0.8098,0.8073,0.9206,0.795,0.7764,0.8327
+Skenario 3 (CLAHE + Augmentasi),EfficientNet-B0,7,0.8087,0.8101,0.9268,0.8107,0.8147,0.8326
+Skenario 3 (CLAHE + Augmentasi),EfficientNet-B0,123,0.8087,0.8095,0.9255,0.8102,0.804,0.8452
+Skenario 3 (CLAHE + Augmentasi),DenseNet121,42,0.7945,0.7929,0.9158,0.7728,0.757,0.8284
+Skenario 3 (CLAHE + Augmentasi),DenseNet121,7,0.8153,0.8116,0.9117,0.8063,0.8406,0.8369
+Skenario 3 (CLAHE + Augmentasi),DenseNet121,123,0.7792,0.7789,0.9096,0.7813,0.7904,0.8476

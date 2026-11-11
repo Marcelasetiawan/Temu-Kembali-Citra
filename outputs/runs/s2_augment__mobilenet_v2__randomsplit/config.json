@@ -1,0 +1,22 @@
+{
+  "scenario": "s2_augment",
+  "model": "mobilenet_v2",
+  "epochs_max": 20,
+  "epochs_run": 9,
+  "best_epoch": 4,
+  "batch": 32,
+  "lr": 0.0001,
+  "optimizer": "AdamW",
+  "weight_decay": 0.0001,
+  "scheduler": "CosineAnnealing",
+  "patience": 5,
+  "seed": 42,
+  "splits": "splits_random_image.csv",
+  "train_minutes": 1.9759820483332684,
+  "class_weights": [
+    1.2295626401901245,
+    0.703243613243103,
+    1.30766761302948
+  ],
+  "device": "NVIDIA GeForce RTX 4050 Laptop GPU"
+}

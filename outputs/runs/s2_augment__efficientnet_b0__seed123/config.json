@@ -1,0 +1,22 @@
+{
+  "scenario": "s2_augment",
+  "model": "efficientnet_b0",
+  "epochs_max": 20,
+  "epochs_run": 15,
+  "best_epoch": 10,
+  "batch": 32,
+  "lr": 0.0001,
+  "optimizer": "AdamW",
+  "weight_decay": 0.0001,
+  "scheduler": "CosineAnnealing",
+  "patience": 5,
+  "seed": 123,
+  "splits": "splits.csv",
+  "train_minutes": 8.22491221666666,
+  "class_weights": [
+    1.2201029062271118,
+    0.7036843299865723,
+    1.3169934749603271
+  ],
+  "device": "NVIDIA GeForce RTX 4050 Laptop GPU"
+}

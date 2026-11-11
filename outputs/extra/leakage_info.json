@@ -1,0 +1,6 @@
+{
+  "test_patients": 759,
+  "test_patients_also_in_train": 424,
+  "test_images_with_patient_in_train": 523,
+  "test_images": 874
+}

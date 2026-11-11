@@ -1,0 +1,5 @@
+Model,Pembagian data,Akurasi,Macro F1,Macro AUC,P@10,mAP
+MobileNetV2,Per pasien (penelitian ini),0.8055,0.8072,0.9145,0.8032,0.7903
+MobileNetV2,Acak per citra,0.8352,0.8238,0.9397,0.81,0.7735
+EfficientNet-B0,Per pasien (penelitian ini),0.8142,0.8186,0.9299,0.8176,0.808
+EfficientNet-B0,Acak per citra,0.8284,0.8205,0.945,0.8106,0.79

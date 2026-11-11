@@ -1,0 +1,31 @@
+# Lingkungan Python dan cache
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Skrip pembuat dokumen (bukan kode penelitian)
+tools/
+
+# Dataset asli (±1,2 GB) dan cache citra hasil pra-proses (±470 MB);
+# unduh dataset dari Kaggle/Mendeley lalu jalankan src/prepare_data.py
+data pneumonia/
+data/cache/
+
+# Bobot model dan galeri embedding semua percobaan (±775 MB);
+# hanya proposed model (DenseNet121 Skenario 2, seed 7) yang disertakan
+outputs/runs/**/best.pt
+outputs/runs/**/gallery.npz
+!outputs/runs/s2_augment__densenet121__seed7/best.pt
+!outputs/runs/s2_augment__densenet121__seed7/gallery.npz
+
+# Log proses
+*.log
+
+# Dokumen tugas (memuat nama dan NIM anggota) dan naskah artikel pihak lain
+*.docx
+*.pdf
+~$*
+
+# Catatan referensi versi lama (daftar terbaru ada di referensi.bib)
+referensi/daftar_referensi.md

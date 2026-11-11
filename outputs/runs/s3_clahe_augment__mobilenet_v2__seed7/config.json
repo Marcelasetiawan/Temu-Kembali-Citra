@@ -1,0 +1,22 @@
+{
+  "scenario": "s3_clahe_augment",
+  "model": "mobilenet_v2",
+  "epochs_max": 20,
+  "epochs_run": 9,
+  "best_epoch": 4,
+  "batch": 32,
+  "lr": 0.0001,
+  "optimizer": "AdamW",
+  "weight_decay": 0.0001,
+  "scheduler": "CosineAnnealing",
+  "patience": 5,
+  "seed": 7,
+  "splits": "splits.csv",
+  "train_minutes": 4.43479956333346,
+  "class_weights": [
+    1.2201029062271118,
+    0.7036843299865723,
+    1.3169934749603271
+  ],
+  "device": "NVIDIA GeForce RTX 4050 Laptop GPU"
+}

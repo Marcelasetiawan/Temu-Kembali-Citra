@@ -1,0 +1,28 @@
+Skenario,Model,class,TP,TN,FP,FN,precision,recall,f1,accuracy,specificity,auc,support
+Skenario 1 (Original),MobileNetV2,Normal,222,669,11,13,0.9528,0.9447,0.9487,0.9738,0.9838,0.9966,235
+Skenario 1 (Original),MobileNetV2,Bacteria,326,420,70,99,0.8232,0.7671,0.7942,0.8153,0.8571,0.8939,425
+Skenario 1 (Original),MobileNetV2,Virus,182,556,104,73,0.6364,0.7137,0.6728,0.8066,0.8424,0.8502,255
+Skenario 1 (Original),EfficientNet-B0,Normal,223,657,23,12,0.9065,0.9489,0.9272,0.9617,0.9662,0.9888,235
+Skenario 1 (Original),EfficientNet-B0,Bacteria,344,389,101,81,0.773,0.8094,0.7908,0.8011,0.7939,0.8769,425
+Skenario 1 (Original),EfficientNet-B0,Virus,145,581,79,110,0.6473,0.5686,0.6054,0.7934,0.8803,0.8393,255
+Skenario 1 (Original),DenseNet121,Normal,230,657,23,5,0.9091,0.9787,0.9426,0.9694,0.9662,0.9959,235
+Skenario 1 (Original),DenseNet121,Bacteria,356,388,102,69,0.7773,0.8376,0.8063,0.8131,0.7918,0.8924,425
+Skenario 1 (Original),DenseNet121,Virus,144,600,60,111,0.7059,0.5647,0.6275,0.8131,0.9091,0.8525,255
+Skenario 2 (Augmentasi),MobileNetV2,Normal,228,663,17,7,0.9306,0.9702,0.95,0.9738,0.975,0.9964,235
+Skenario 2 (Augmentasi),MobileNetV2,Bacteria,341,413,77,84,0.8158,0.8024,0.809,0.824,0.8429,0.8957,425
+Skenario 2 (Augmentasi),MobileNetV2,Virus,168,576,84,87,0.6667,0.6588,0.6627,0.8131,0.8727,0.8515,255
+Skenario 2 (Augmentasi),EfficientNet-B0,Normal,231,658,22,4,0.913,0.983,0.9467,0.9716,0.9676,0.9954,235
+Skenario 2 (Augmentasi),EfficientNet-B0,Bacteria,328,433,57,97,0.8519,0.7718,0.8099,0.8317,0.8837,0.9141,425
+Skenario 2 (Augmentasi),EfficientNet-B0,Virus,186,569,91,69,0.6715,0.7294,0.6992,0.8251,0.8621,0.8803,255
+Skenario 2 (Augmentasi),DenseNet121,Normal,227,662,18,8,0.9265,0.966,0.9458,0.9716,0.9735,0.9963,235
+Skenario 2 (Augmentasi),DenseNet121,Bacteria,353,405,85,72,0.8059,0.8306,0.8181,0.8284,0.8265,0.9,425
+Skenario 2 (Augmentasi),DenseNet121,Virus,159,587,73,96,0.6853,0.6235,0.653,0.8153,0.8894,0.8539,255
+Skenario 3 (CLAHE + Augmentasi),MobileNetV2,Normal,227,660,20,8,0.919,0.966,0.9419,0.9694,0.9706,0.9966,235
+Skenario 3 (CLAHE + Augmentasi),MobileNetV2,Bacteria,334,420,70,91,0.8267,0.7859,0.8058,0.824,0.8571,0.9045,425
+Skenario 3 (CLAHE + Augmentasi),MobileNetV2,Virus,174,570,90,81,0.6591,0.6824,0.6705,0.8131,0.8636,0.8636,255
+Skenario 3 (CLAHE + Augmentasi),EfficientNet-B0,Normal,230,656,24,5,0.9055,0.9787,0.9407,0.9683,0.9647,0.9952,235
+Skenario 3 (CLAHE + Augmentasi),EfficientNet-B0,Bacteria,350,410,80,75,0.814,0.8235,0.8187,0.8306,0.8367,0.9031,425
+Skenario 3 (CLAHE + Augmentasi),EfficientNet-B0,Virus,161,590,70,94,0.697,0.6314,0.6626,0.8208,0.8939,0.8637,255
+Skenario 3 (CLAHE + Augmentasi),DenseNet121,Normal,226,658,22,9,0.9113,0.9617,0.9358,0.9661,0.9676,0.9941,235
+Skenario 3 (CLAHE + Augmentasi),DenseNet121,Bacteria,345,400,90,80,0.7931,0.8118,0.8023,0.8142,0.8163,0.8992,425
+Skenario 3 (CLAHE + Augmentasi),DenseNet121,Virus,156,584,76,99,0.6724,0.6118,0.6407,0.8087,0.8848,0.854,255

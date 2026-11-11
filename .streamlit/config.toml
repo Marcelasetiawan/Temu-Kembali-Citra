@@ -1,0 +1,7 @@
+[server]
+# Hanya dapat diakses dari laptop ini (tidak terbuka ke jaringan lain).
+address = "localhost"
+port = 8501
+
+[browser]
+gatherUsageStats = false

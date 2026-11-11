@@ -1,0 +1,6 @@
+Model,Akurasi,Presisi,Recall,F1,P@10,mAP,P@10 + RF,mAP + RF
+"Proposed (DenseNet121 S2), split per pasien",0.9727,0.9866,0.9765,0.9815,0.9731,0.9683,0.9864,0.9775
+"MobileNetV2 S2, split per pasien",0.9738,0.9896,0.975,0.9822,0.9713,0.9518,0.9831,0.96
+"MobileNetV2 S2, split acak per citra",0.9645,0.9919,0.9592,0.9753,0.9659,0.9529,0.9816,0.9591
+"EfficientNet-B0 S2, split per pasien",0.9716,0.994,0.9676,0.9806,0.9709,0.9672,0.9878,0.9815
+"EfficientNet-B0 S2, split acak per citra",0.9645,0.9871,0.9639,0.9754,0.9629,0.9609,0.9814,0.9717

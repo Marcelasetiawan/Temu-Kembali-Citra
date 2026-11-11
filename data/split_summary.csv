@@ -1,0 +1,5 @@
+split,Normal,Bacteria,Virus,Total,Pasien
+test,235,425,255,915,473
+train,1101,1909,1020,4030,2173
+val,243,426,210,879,471
+Total,1579,2760,1485,5824,3117
