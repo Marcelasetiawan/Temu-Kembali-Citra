@@ -138,9 +138,11 @@ def pilihan_model():
 @st.cache_resource
 def load_system(scenario, arch, tag):
     d = run_dir(scenario, arch, tag)
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = RetrievalNet(arch, pretrained=False).to(device).eval()
-    model.load_state_dict(torch.load(d / "best.pt", map_location=device, weights_only=True))
+    device = torch.device("cuda" if torch.cuda.is_available() and torch.cuda.device_count() > 0 else "cpu")
+    model = RetrievalNet(arch, pretrained=False)
+    # bobot dibaca ke CPU dulu agar tetap bisa dijalankan di server tanpa GPU
+    model.load_state_dict(torch.load(d / "best.pt", map_location="cpu", weights_only=True))
+    model = model.to(device).eval()
     g = np.load(d / "gallery.npz", allow_pickle=True)
     emb = g["emb"].astype(np.float32)
     emb /= np.linalg.norm(emb, axis=1, keepdims=True)
@@ -157,6 +159,21 @@ def contoh_uji(n=4):
         for r in df[df["label"] == c].head(n).itertuples():
             rows.append({"nama": Path(r.raw_path).name, "label": c, "cache_name": r.cache_name})
     return pd.DataFrame(rows)
+
+
+# Versi online tidak memiliki data/cache (terlalu besar untuk GitHub); gambar diambil dari data/demo
+# yang dibuat oleh src/make_demo_images.py. Embedding tetap dari gallery.npz, jadi hasilnya sama.
+DEMO_DIR = DATA_DIR / "demo"
+
+
+def path_galeri(sub, name):
+    p = CACHE_DIR / sub / name
+    return p if p.exists() else DEMO_DIR / "galeri" / (Path(name).stem + ".jpg")
+
+
+def path_contoh(name):
+    p = CACHE_DIR / "original" / name
+    return p if p.exists() else DEMO_DIR / "contoh" / name
 
 
 def preprocess(pil_img, cache_sub):
@@ -323,7 +340,7 @@ def halaman_cari():
                 pilihan = st.selectbox("Contoh dari data uji (tidak ada di arsip)", ex.index,
                                        format_func=lambda i: f"{LABEL_ID[ex.loc[i, 'label']]} · {ex.loc[i, 'nama']}")
                 row = ex.loc[pilihan]
-                query_img = Image.open(CACHE_DIR / "original" / row["cache_name"])
+                query_img = Image.open(path_contoh(row["cache_name"]))
                 query_id, label_asli = f"ex_{row['cache_name']}", row["label"]
             with st.expander("Pengaturan", icon=":material/tune:"):
                 k = st.slider("Jumlah foto mirip yang ditampilkan", 5, 20, 10, step=5)
@@ -383,7 +400,7 @@ def halaman_cari():
             cols = st.columns(n_kol)
             for j, idx in enumerate(top[start:start + n_kol]):
                 with cols[j]:
-                    st.image(str(CACHE_DIR / cache_sub / g_names[idx]), use_container_width=True)
+                    st.image(str(path_galeri(cache_sub, g_names[idx])), use_container_width=True)
                     mirip = f"{sims[idx]:.3f}".replace(".", ",")
                     st.markdown(f"**#{start + j + 1}** {badge(CLASSES[g_lab[idx]])}<br>"
                                 f'<span class="small">Kemiripan {mirip}</span>', unsafe_allow_html=True)

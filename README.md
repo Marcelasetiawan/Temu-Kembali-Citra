@@ -45,13 +45,15 @@ percobaan lain tidak diunggah karena ukurannya besar, tetapi seluruh metriknya t
 
 ### 1. Instal library
 
-Python 3.11. Untuk GPU NVIDIA (CUDA 12.4):
+Python 3.11. Untuk pelatihan dan notebook dengan GPU NVIDIA (CUDA 12.4):
 
 ```bash
 python -m venv .venv
 .venv\Scripts\activate            # Windows
-pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu124
+pip install -r requirements-gpu.txt --extra-index-url https://download.pytorch.org/whl/cu124
 ```
+
+Jika hanya ingin menjalankan aplikasi (tanpa GPU), cukup `pip install -r requirements.txt`.
 
 ### 2. Unduh dataset
 
@@ -72,7 +74,9 @@ python prepare_data.py
 ```
 
 Langkah ini memberi label 3 kelas dari nama file, menghapus 32 citra duplikat, membagi data per pasien
-(70/15/15), dan membuat cache citra di `data/cache/`. Cache ini juga diperlukan aplikasi untuk menampilkan gambar.
+(70/15/15), dan membuat cache citra di `data/cache/`. Jika cache ini tidak ada, aplikasi memakai gambar ringan
+di `data/demo/` (dibuat dengan `python src/make_demo_images.py`), sehingga aplikasi tetap bisa dijalankan
+tanpa mengunduh dataset.
 
 ### 4. Jalankan aplikasi
 
@@ -81,6 +85,12 @@ Dari folder utama:
 ```bash
 python -m streamlit run app.py
 ```
+
+### Versi online (Streamlit Community Cloud)
+
+Aplikasi dapat di-deploy dari repositori ini di [share.streamlit.io](https://share.streamlit.io) dengan
+main file `app.py` dan Python 3.11. Versi online memakai `requirements.txt` (PyTorch CPU) dan gambar di
+`data/demo/`; embedding galeri tetap dari `gallery.npz`, sehingga hasil pencarian sama dengan versi lokal.
 
 ### 5. (Opsional) Ulangi eksperimen
 
