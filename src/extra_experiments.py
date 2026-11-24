@@ -1,7 +1,7 @@
 """Eksperimen pendukung untuk Bab 4.
 
 1. Uji kebocoran data: pembagian acak per citra (mengabaikan pasien) vs pembagian per pasien.
-2. Baseline temu kembali dengan fitur pretrained ImageNet tanpa fine-tuning (pendekatan referensi utama 2).
+2. Baseline temu kembali dengan fitur pretrained ImageNet tanpa fine-tuning (pendekatan CBIR yang umum dipakai).
 3. Pengulangan seluruh konfigurasi dengan seed lain untuk rata-rata dan simpangan baku.
 """
 import json

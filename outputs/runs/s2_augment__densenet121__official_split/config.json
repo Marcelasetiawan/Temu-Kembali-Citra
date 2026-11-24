@@ -1,0 +1,22 @@
+{
+  "scenario": "s2_augment",
+  "model": "densenet121",
+  "epochs_max": 20,
+  "epochs_run": 13,
+  "best_epoch": 8,
+  "batch": 32,
+  "lr": 0.0001,
+  "optimizer": "AdamW",
+  "weight_decay": 0.0001,
+  "scheduler": "CosineAnnealing",
+  "patience": 5,
+  "seed": 42,
+  "splits": "splits_official.csv",
+  "train_minutes": 8.81681506,
+  "class_weights": [
+    1.277366280555725,
+    0.6931666135787964,
+    1.2911813259124756
+  ],
+  "device": "NVIDIA GeForce RTX 4050 Laptop GPU"
+}

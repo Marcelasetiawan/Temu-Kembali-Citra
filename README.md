@@ -92,6 +92,7 @@ python extra_experiments.py       # 3 seed, fitur pretrained, uji kebocoran data
 python relevance_feedback.py      # evaluasi relevance feedback
 python binary_comparison.py       # perbandingan normal vs pneumonia
 python reproduce_benmalek.py      # reproduksi protokol Benmalek dkk. (2025)
+python official_split.py          # percobaan tambahan: folder bawaan Kaggle (train/val/test)
 ```
 
 ## Catatan pembagian data
@@ -100,6 +101,13 @@ Nomor pasien kelas pneumonia diambil dari nama file (`person23_bacteria_105.jpeg
 menyediakan nomor pasien untuk kelas normal, sehingga citra normal dikelompokkan berdasarkan kode pada nama file
 (`IM-0011-0001.jpeg` dan `IM-0011-0001-0001.jpeg` → kelompok `IM-0011`). Pengelompokan ini adalah asumsi;
 karena hampir setiap kode hanya memiliki satu citra, kelas normal pada praktiknya terbagi per citra.
+
+## Percobaan tambahan: folder bawaan Kaggle
+
+Proposed model juga dilatih pada folder `train` bawaan dan diuji pada folder `test` bawaan (`src/official_split.py`,
+satu seed). Hasilnya akurasi 83,5%, macro F1 82,5%, dan mAP 82,2%, hampir sama dengan hasil utama. Namun 290 dari 618
+citra uji (47%) berasal dari nomor pasien yang juga ada di folder `train`, sehingga penelitian ini memakai pembagian
+per pasien. Hasil tersimpan di `outputs/extra/official_split.csv`.
 
 ## Referensi utama
 
