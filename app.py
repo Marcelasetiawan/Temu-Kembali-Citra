@@ -157,7 +157,8 @@ def contoh_uji(n=4):
     rows = []
     for c in CLASSES:
         for r in df[df["label"] == c].head(n).itertuples():
-            rows.append({"nama": Path(r.raw_path).name, "label": c, "cache_name": r.cache_name})
+            # raw_path ditulis di Windows (pakai "\"); diganti "/" agar nama file juga benar di server Linux
+            rows.append({"nama": Path(r.raw_path.replace("\\", "/")).name, "label": c, "cache_name": r.cache_name})
     return pd.DataFrame(rows)
 
 
